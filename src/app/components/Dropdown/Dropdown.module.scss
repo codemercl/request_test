@@ -1,0 +1,32 @@
+.dropdown {
+    position: relative;
+  button {
+    background-color: #009ef7;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .content {
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px #00000008;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
+    position: absolute;
+    z-index: 99;
+    button {
+      cursor: pointer;
+      padding: 10px 5px;
+      background-color: #ffffff;
+      color: #a2a6b6;
+      &:hover {
+        background-color: #f1faff;
+        color: #23a3f7;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.filterSelect {
+  p {
+    font-size: 13px;
+    font-weight: 500;
+    color: #181c32;
+    margin-bottom: 5px;
+  }
+  button {
+    background-color: #f5f8fa;
+    width: 100%;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    &:hover {
+      background: #eaeff3;
+      span {
+        color: #23a3f7;
+      }
+    }
+    img {
+      width: 10px;
+    }
+  }
+}

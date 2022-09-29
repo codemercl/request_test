@@ -1,0 +1,36 @@
+.buttonGroup {
+  button {
+    display: inline-block;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.4s;
+    cursor: pointer;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+    span {
+      display: none;
+    }
+    &:hover {
+      background-color: #009ef7;
+      color: #fff;
+      padding: 10px 30px;
+      span {
+        display: block;
+      }
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+span {
+  margin-left: 10px;
+}

@@ -1,0 +1,32 @@
+.table {
+  overflow-x: scroll;
+
+  max-width: 100%;
+  height: calc(100vh - 230px);
+  margin: 0 auto;
+  .head {
+    display: grid;
+    grid-template-columns: 130px 70px 70px 70px 50px 50px 80px 80px 90px 70px 80px 60px 100px 130px 100px 30px;
+    gap: 10px;
+    font-size: 12px;
+    padding-bottom: 5px;
+    border-bottom: 2px dashed rgb(225, 225, 225);
+    font-weight: bold;
+    color: #181c32;
+    p {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .body {
+    display: grid;
+    grid-template-columns: 130px 70px 70px 70px 50px 50px 80px 80px 90px 70px 80px 60px 100px 130px 100px 30px;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    padding: 5px 0;
+    border-bottom: 2px dashed rgb(225, 225, 225);
+    color: #181c32;
+    font-weight: 500;
+  }
+}

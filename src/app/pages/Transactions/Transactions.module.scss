@@ -1,0 +1,35 @@
+.transactions {
+  display: flex;
+  justify-content: space-between;
+  .content {
+    background-color: #f5f8fa;
+    width: 100%;
+    overflow-x: auto;
+  }
+  .sidebar {
+    width: 300px;
+  }
+}
+
+.settings {
+  display: flex;
+  .buttonGroup {
+    display: flex;
+  }
+}
+
+.table {
+  padding: 0 20px 0px 20px;
+  background-color: #fff;
+  .tableSettings {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0;
+    .tableTerms {
+      display: flex;
+    }
+    .tableControll {
+      display: flex;
+    }
+  }
+}

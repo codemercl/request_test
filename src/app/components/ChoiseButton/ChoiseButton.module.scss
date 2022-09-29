@@ -1,0 +1,56 @@
+.dropdown {
+  position: relative;
+  margin-left: 10px;
+  button {
+    background-color: #f1faff;
+    color: #23a3f7;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 10px;
+    }
+    img {
+      width: 10px;
+    }
+    &:hover {
+      background-color: #009ef7;
+      span {
+        color: #fff;
+      }
+    }
+  }
+  .content {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 4px #0000000c;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
+    position: absolute;
+    right: 0px;
+    z-index: 99;
+    button {
+      cursor: pointer;
+      padding: 10px 5px;
+      background-color: #ffffff;
+      color: #a2a6b6;
+      display: flex;
+      justify-content: right;
+      &:hover {
+        background-color: #f1faff;
+        color: #23a3f7;
+        span {
+          color: #a2a6b6;
+        }
+      }
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+}

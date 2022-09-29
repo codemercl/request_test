@@ -1,0 +1,31 @@
+.filterSwitch {
+  h3 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #181c32;
+    text-align: right;
+  }
+  .buttonGroup {
+    display: flex;
+    margin-top: 10px;
+    button {
+      padding: 8px 20px;
+      background: none;
+      &:hover {
+        background-color: #e6ecf1;
+        color: #7e8299;
+      }
+      &:first-child {
+        margin-left: auto;
+      }
+    }
+    .buttonPrimary {
+      background-color: #23a3f7;
+      color: #fff;
+    }
+    .buttonSecond {
+      background-color: #f5f8fa;
+      color: #7e8299;
+    }
+  }
+}

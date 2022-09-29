@@ -1,0 +1,53 @@
+.dropdown {
+  position: relative;
+  margin-left: 10px;
+  button {
+    background-color: #f1faff;
+    color: #23a3f7;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 10px;
+    }
+    img {
+      width: 15px;
+    }
+    &:hover {
+      background-color: #009ef7;
+      span {
+        color: #fff;
+      }
+    }
+  }
+  .content {
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 4px #0000000c;
+    padding: 20px 25px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
+    position: absolute;
+    h2 {
+      color: #181c32;
+      font-size: 17px;
+      text-align: right;
+    }
+    .fields {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .swith {
+      margin-top: 20px;
+    }
+    .slider {
+      margin-top: 20px;
+    }
+  }
+}
