@@ -1,9 +1,9 @@
 .dropdown {
   position: relative;
-  margin-left: 10px;
+  margin-left: 8px;
   button {
     background-color: #f1faff;
-    color: #23a3f7;
+    color: #A8A8B7;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -22,6 +22,17 @@
       }
     }
   }
+  .count {
+    position: absolute;
+    top: 41px;
+    left: 45px;
+    width: 100px;
+    font-size: 10px;
+    color: #7E8299;
+    background-color: #fff;
+    padding: 3px 0;
+    box-shadow: 2px 2px 2px 4px #6868680c;
+  }
   .content {
     width: 250px;
     background-color: #fff;
@@ -34,22 +45,43 @@
     position: absolute;
     right: 0px;
     z-index: 99;
-    button {
-      cursor: pointer;
-      padding: 10px 5px;
-      background-color: #ffffff;
-      color: #a2a6b6;
-      display: flex;
-      justify-content: right;
-      &:hover {
-        background-color: #f1faff;
-        color: #23a3f7;
-        span {
-          color: #a2a6b6;
+    .buttons {
+      button {
+        margin-top: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: right;
+        width: 100%;
+        padding: 5px 5px;
+        background-color: #ffffff;
+        color: #a2a6b6;
+        &:hover {
+          background-color: #f1faff;
+          color: #23a3f7;
+          span {
+            color: #a2a6b6;
+          }
+        }
+        label {
+          cursor: pointer;
         }
       }
-      label {
+    }
+    .field {
+      text-align: right;
+      input {
+        display: inline-block;
+        width: 100%;
         cursor: pointer;
+        background-color: #f1faff;
+        color: #23a3f7;
+        padding: 15px 20px;
+        border-radius: 5px;
+        outline: none;
+        text-align: right;
+        &::placeholder {
+          color: rgb(220, 220, 220);
+        }
       }
     }
   }

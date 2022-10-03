@@ -3,10 +3,10 @@
 
   max-width: 100%;
   height: calc(100vh - 230px);
-  margin: 0 auto;
+
   .head {
     display: grid;
-    grid-template-columns: 130px 70px 70px 70px 50px 50px 80px 80px 90px 70px 80px 60px 100px 130px 100px 30px;
+    grid-template-columns: 160px 60px 50px 50px 50px 50px 120px 60px 70px 50px 120px 50px 80px 130px 100px 30px 50px;
     gap: 10px;
     font-size: 12px;
     padding-bottom: 5px;
@@ -16,17 +16,63 @@
     p {
       display: flex;
       flex-wrap: wrap;
+      justify-content: end;
+      text-align: right;
     }
   }
   .body {
-    display: grid;
-    grid-template-columns: 130px 70px 70px 70px 50px 50px 80px 80px 90px 70px 80px 60px 100px 130px 100px 30px;
-    align-items: center;
-    gap: 10px;
     font-size: 12px;
-    padding: 5px 0;
-    border-bottom: 2px dashed rgb(225, 225, 225);
     color: #181c32;
     font-weight: 500;
+    .wrapper {
+      display: grid;
+      grid-template-columns: 160px 60px 50px 50px 50px 50px 120px 60px 70px 50px 120px 50px 80px 130px 100px 30px 50px;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px dashed rgb(237, 237, 237);
+      position: relative;
+      &:hover {
+        background-color: #E4F4FF;
+      }
+      p {
+        text-align: right;
+      }
+      .tab {
+        display: inline-block;
+        background-color: #f1faff;
+        color: #009ef7;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: #edf7fc;
+        }
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 280px 150px 200px 200px 150px;
+        gap: 15px 40px;
+        padding: 15px 30px;
+        width: 100%;
+      }
+    }
   }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  cursor: pointer;
+  background-color: #f1faff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #009ef7;
+  border-radius: 5px;
+  cursor: pointer;
 }

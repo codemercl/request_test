@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="21" viewBox="0 0 35 21">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_39" data-name="Rectangle 39" width="25" height="17" transform="translate(-1.654 -1.727)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-Mastercard">
+      <rect width="35" height="21"/>
+    </clipPath>
+  </defs>
+  <g id="Mastercard" clip-path="url(#clip-Mastercard)">
+    <rect width="35" height="21" fill="#fff"/>
+    <g id="mastercard-2" data-name="mastercard" transform="translate(-0.432 -0.259)">
+      <rect id="Rectangle_38" data-name="Rectangle 38" width="35" height="21" rx="6" transform="translate(0.432 0.259)" fill="#f6f8fa"/>
+      <g id="Group_25" data-name="Group 25" transform="translate(7.086 3.986)" clip-path="url(#clip-path)">
+        <path id="Path_10" data-name="Path 10" d="M39.747,22.741H33.878V12.227h5.869Z" transform="translate(-25.96 -10.798)" fill="#ff5f00"/>
+        <path id="Path_11" data-name="Path 11" d="M24.29,15.686a6.668,6.668,0,0,1,2.562-5.257,6.686,6.686,0,1,0,0,10.513A6.667,6.667,0,0,1,24.29,15.686Z" transform="translate(-16 -9)" fill="#eb001b"/>
+        <path id="Path_12" data-name="Path 12" d="M51.355,15.686A6.712,6.712,0,0,1,40.5,20.943a6.674,6.674,0,0,0,0-10.513,6.712,6.712,0,0,1,10.852,5.257" transform="translate(-29.65 -9)" fill="#f79e1b"/>
+      </g>
+    </g>
+  </g>
+</svg>

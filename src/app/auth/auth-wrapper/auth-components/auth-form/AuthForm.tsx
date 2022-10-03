@@ -1,7 +1,10 @@
 import React from "react";
 import AuthInput from "../auth-input/AuthInput";
 import AuthButton from "../auth-button/AuthButton";
-import { formToggle, IForm } from "../../../../../store/slices/authorization-slice/types";
+import {
+  formToggle,
+  IForm,
+} from "../../../../../store/slices/authorization-slice/types";
 import { onForm, onToggleForm } from "../../../../../hooks/auth-form";
 import { Dispatch, Selector } from "../../../../../store/store";
 import Logo from "../../../../../assets/logo/logo.png";
@@ -22,7 +25,6 @@ const AuthForm: React.FC<IProps> = ({ typeForm, email, password, error }) => {
       {typeForm === formToggle.SIGN_IN ? (
         <div className={styles.wrapper}>
           <div className={styles.content}>
-            {error ? <p>{error}</p> : null}
             <div className={styles.head}>
               <img src={Logo} alt="Logo" />
             </div>
@@ -30,14 +32,10 @@ const AuthForm: React.FC<IProps> = ({ typeForm, email, password, error }) => {
               <h2>Sign In to Pelecard</h2>
               <p>
                 New Here?
-                <button
-                  onClick={(e) => onToggleForm(formToggle.SIGN_UP, dispatch, e)}
-                >
-                  Create an Account
-                </button>
+                <button>Create an Account</button>
               </p>
-              <AuthInput value={email} label="Email" type="text" />
-              <AuthInput value={password} label="Password" type="password" />
+              <AuthInput error={error} value={email} label="Email" type="text" />
+              <AuthInput error={error} value={password} label="Password" type="password" />
               <AuthButton
                 onClick={(e) => onForm(formToggle.SIGN_IN, dispatch, e)}
                 text="Sign In"

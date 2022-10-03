@@ -23,15 +23,17 @@
     }
   }
   .content {
+    position: absolute;
+    z-index: 999;
     width: 400px;
     background-color: #fff;
-    box-shadow: 2px 2px 2px 4px #0000000c;
     padding: 20px 25px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     margin-top: 7px;
     position: absolute;
+    box-shadow: 2px 2px 2px 4px #0000000c;
     h2 {
       color: #181c32;
       font-size: 17px;
@@ -42,6 +44,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
+      text-align: right;
     }
     .swith {
       margin-top: 20px;

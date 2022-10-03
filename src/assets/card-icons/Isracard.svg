@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="21" viewBox="0 0 35 21">
+  <defs>
+    <clipPath id="clip-Isracard">
+      <rect width="35" height="21"/>
+    </clipPath>
+  </defs>
+  <g id="Isracard" clip-path="url(#clip-Isracard)">
+    <rect width="35" height="21" fill="#fff"/>
+    <g id="mastercard" transform="translate(-0.432 -0.259)">
+      <rect id="Rectangle_38" data-name="Rectangle 38" width="35" height="21" rx="6" transform="translate(0.432 0.259)" fill="#f6f8fa"/>
+      <g id="g476" transform="translate(8.106 4.367)">
+        <path id="path478" d="M-.442-7.085a1.184,1.184,0,0,0,0,1.675L4.766-.2A1.184,1.184,0,0,0,6.44-.2l5.208-5.208a1.184,1.184,0,0,0,0-1.675L6.44-12.294a1.184,1.184,0,0,0-1.674,0Z" transform="translate(0.789 12.641)" fill="#ee2d24"/>
+      </g>
+      <g id="g480" transform="translate(14.974 4.367)">
+        <path id="path482" d="M-.442-7.085a1.184,1.184,0,0,0,0,1.675L4.766-.2A1.184,1.184,0,0,0,6.44-.2l5.208-5.208a1.184,1.184,0,0,0,0-1.675L6.44-12.294a1.184,1.184,0,0,0-1.674,0Z" transform="translate(0.789 12.641)" fill="#352aff"/>
+      </g>
+    </g>
+  </g>
+</svg>

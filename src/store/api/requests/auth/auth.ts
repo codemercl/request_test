@@ -3,7 +3,7 @@ import { axiosConfig } from "../../axios.config";
 
 class AuthRequests implements IAuthRequests {
   public auth(body: IUserAuthBody): Promise<any> {
-    return axiosConfig.post("Auth/login", body);
+    return axiosConfig.post("auth/login", body);
   }
 
   public refreshToken(body: IRefreshTokenBody): Promise<any> {
@@ -13,6 +13,5 @@ class AuthRequests implements IAuthRequests {
   public registr(body: IUserAuthBody): Promise<any> {
     return axiosConfig.post("auth/signup", body);
   }
-
 }
 export default new AuthRequests();

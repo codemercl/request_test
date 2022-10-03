@@ -1,8 +1,18 @@
 import { useEffect } from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import { Dispatch, Selector } from "./store/store";
-import { changeCreateDateAccessToken, changeTimeAccessToken, toggleAuth } from "./store/slices/authorization-slice/authorization-slice";
-import { Dashboard, Transactions, Reports, PageNotFound } from "./app/pages";
+import {
+  changeCreateDateAccessToken,
+  changeTimeAccessToken,
+  toggleAuth,
+} from "./store/slices/authorization-slice/authorization-slice";
+import {
+  Dashboard,
+  Transactions,
+  Reports,
+  PageNotFound,
+  ForgotPassword,
+} from "./app/pages";
 import AuthContainer from "./app/auth/auth-container";
 
 import "./App.scss";
@@ -39,6 +49,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
+        {/* <Route path="/forgot" element={<ForgotPassword />} /> */}
       </Routes>
     </div>
   );

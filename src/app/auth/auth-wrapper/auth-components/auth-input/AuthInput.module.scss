@@ -1,0 +1,17 @@
+.forgot {
+  display: flex;
+  align-items: center;
+  a {
+    margin-left: 10px;
+    color: #23a3f7;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  span {
+    font-size: 9px;
+    color: #ec630d;
+  }
+}
+.errorInput {
+  background-color: #ec630d;
+}

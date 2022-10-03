@@ -7,7 +7,6 @@
     border-radius: 5px;
     cursor: pointer;
     display: flex;
-    align-items: center;
     span {
       margin-right: 10px;
     }
@@ -15,27 +14,31 @@
       width: 15px;
     }
     &:hover {
-      background-color: #009EF7;
+      background-color: #009ef7;
       span {
         color: #fff;
       }
     }
   }
   .content {
-    width: 200px;
+    width: 150px;
     background-color: #fff;
-    box-shadow: 0px 0px 20px #00000008;
+    box-shadow: 2px 2px 2px 4px #0000000c;
     padding: 10px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     margin-top: 7px;
     position: absolute;
+    z-index: 999;
     button {
       cursor: pointer;
+      justify-content: end;
+
       padding: 10px 5px;
       background-color: #ffffff;
       color: #a2a6b6;
+      text-align: right;
       &:hover {
         background-color: #f1faff;
         color: #23a3f7;

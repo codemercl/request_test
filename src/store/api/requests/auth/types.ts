@@ -12,3 +12,7 @@ export interface IAuthRequests {
   registr(body: IUserAuthBody): Promise<any>;
   refreshToken(body: IRefreshTokenBody): Promise<any>;
 }
+
+export interface IContentRequests {
+  getContent(): Promise<any>;
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="34" viewBox="0 0 34 34">
+  <defs>
+    <clipPath id="clip-Broadcast">
+      <rect width="34" height="34"/>
+    </clipPath>
+  </defs>
+  <g id="Broadcast" clip-path="url(#clip-Broadcast)">
+    <rect width="34" height="34" fill="#fff"/>
+    <g id="Group_123" data-name="Group 123" transform="translate(-455 -95)">
+      <rect id="Rectangle_26" data-name="Rectangle 26" width="34" height="34" rx="5" transform="translate(455 95)" fill="#fff"/>
+      <g id="antenna-signal-svgrepo-com" transform="translate(416.763 106)">
+        <path id="Path_47" data-name="Path 47" d="M149.466,114.208a.8.8,0,1,0,0,1.6,1.939,1.939,0,0,1,1.937,1.935.8.8,0,1,0,1.6,0A3.543,3.543,0,0,0,149.466,114.208Z" transform="translate(-94.105 -111.432)" fill="#47be7d"/>
+        <path id="Path_48" data-name="Path 48" d="M126.142,0h0a.8.8,0,1,0,0,1.6h0a5.286,5.286,0,0,1,5.278,5.278.8.8,0,0,0,.8.8h0a.8.8,0,0,0,.8-.8A6.89,6.89,0,0,0,126.142,0Z" transform="translate(-71.346)" fill="#47be7d"/>
+        <path id="Path_49" data-name="Path 49" d="M56.115,216.069a1.665,1.665,0,1,0-2.616-.029L52.245,219.5a.5.5,0,0,0,.3.641.5.5,0,0,0,.171.03.5.5,0,0,0,.471-.33l1.166-3.218a1.669,1.669,0,0,0,.9.009l1.163,3.209a.5.5,0,0,0,.471.33.494.494,0,0,0,.171-.03.5.5,0,0,0,.3-.641Z" transform="translate(0 -208.173)" fill="#47be7d"/>
+      </g>
+    </g>
+  </g>
+</svg>

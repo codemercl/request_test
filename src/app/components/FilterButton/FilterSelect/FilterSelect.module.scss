@@ -11,6 +11,7 @@
     padding: 10px 12px;
     display: flex;
     justify-content: space-between;
+    position: relative;
     &:hover {
       background: #eaeff3;
       span {
@@ -20,5 +21,8 @@
     img {
       width: 10px;
     }
+  }
+  .content {
+    position: absolute;
   }
 }

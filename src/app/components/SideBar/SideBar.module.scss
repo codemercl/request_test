@@ -27,6 +27,7 @@
           grid-template-columns: 1fr 100px 15px;
           padding: 13px 20px;
           transition: all 0.2s;
+          cursor: pointer;
           &:hover {
             background-color: #1b1b2a;
             color: #fff;
@@ -37,10 +38,14 @@
               opacity: 1;
             }
             p {
-                color: #fff;
-              }
+              color: #fff;
+            }
           }
           span {
+            color: #c5c5d8;
+          }
+          button {
+            font-size: 16px;
             color: #c5c5d8;
           }
           p {
@@ -50,6 +55,41 @@
             width: 15px;
             opacity: 0.6;
           }
+        }
+        button {
+          margin-right: 24px;
+          transition: all 0.2s;
+          cursor: pointer;
+          &:hover {
+            background-color: #1b1b2a;
+            color: #fff;
+            span {
+              color: #fff;
+            }
+            img {
+              opacity: 1;
+            }
+            p {
+              color: #fff;
+            }
+          }
+          span {
+            color: #c5c5d8;
+          }
+          button {
+            font-size: 16px;
+            color: #c5c5d8;
+          }
+          p {
+            color: #ffffff59;
+          }
+          img {
+            width: 15px;
+            opacity: 0.6;
+          }
+        }
+        :first-child {
+          opacity: .4;
         }
       }
     }

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="21" viewBox="0 0 35 21">
+  <defs>
+    <clipPath id="clip-PL">
+      <rect width="35" height="21"/>
+    </clipPath>
+  </defs>
+  <g id="PL" clip-path="url(#clip-PL)">
+    <rect width="35" height="21" fill="#fff"/>
+    <g id="mastercard" transform="translate(-0.432 -0.259)">
+      <rect id="Rectangle_38" data-name="Rectangle 38" width="35" height="21" rx="6" transform="translate(0.432 0.259)" fill="#f6f8fa"/>
+    </g>
+    <g id="Group_121" data-name="Group 121" transform="translate(-0.5 2)">
+      <text id="PL-2" data-name="PL" transform="translate(13 11)" font-size="8" font-family="Rubik-Bold, Rubik" font-weight="700"><tspan x="0" y="0">PL</tspan></text>
+      <line id="Line_1" data-name="Line 1" x2="9.5" transform="translate(13.5 12.5)" fill="none" stroke="#000" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

@@ -1,29 +1,35 @@
-import React, { FC, useEffect, useState } from "react";
-import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
-import TabContext from "@mui/lab/TabContext";
-import TabList from "@mui/lab/TabList";
-import TabPanel from "@mui/lab/TabPanel";
+import React, { useEffect } from "react";
+import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { Box, Tab, TextField } from "@mui/material";
+import dayjs, { Dayjs } from "dayjs";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { Dispatch, Selector } from "../../../store/store";
+import { TabContext, TabList, TabPanel } from "@mui/lab";
+import { ActionButton, Button, ChoiseButton, Dropdown, ExportButton, FilterButton, SideBar, Table } from "../../components";
+import { getContent, getContentSelector } from "../../../store/slices/content-slice/content-slice";
+import { getTerminals, getTerminalsSelector } from "../../../store/slices/terminals-slice/terminals-slice";
+import { formToggle } from "../../../store/slices/authorization-slice/types";
+import styles from "./Transactions.module.scss"
+
 import Export from "../../../assets/button-group/export-icon.png";
 import Arrow from "../../../assets/button-group/arrow-icon.png";
 import Filter from "../../../assets/button-group/filter-icon.png";
-
-import {
-  Dropdown,
-  SideBar,
-  Table,
-  ActionButton,
-  ExportButton,
-  FilterButton,
-  Button,
-  ChoiseButton,
-} from "../../components";
-
-import styles from "./Transactions.module.scss";
-import axios from "axios";
+import Delete from "../../../assets/button-group/delete-icon.svg";
+import Refresh from "../../../assets/button-group/refresh-icon.svg";
+import Snow from "../../../assets/button-group/snow-icon.svg";
+import Signal from "../../../assets/button-group/signal-icon.svg";
 
 export const Transactions = () => {
+  const dispatch = Dispatch();
+  const { content } = Selector(getContentSelector);
+  const { terminals } = Selector(getTerminalsSelector);
   const [value, setValue] = React.useState("1");
+
+  useEffect(() => {
+    dispatch(getContent());
+    dispatch(getTerminals());
+  }, [dispatch]);
 
   const handleChange = (event: any, newValue: any) => {
     setValue(newValue);
@@ -33,27 +39,14 @@ export const Transactions = () => {
     alert();
   };
 
-  const [appState, setAppState] = useState([]);
-  console.log(setAppState);
+  const [valuePicker, setValuePicker] = React.useState<Dayjs | null>(
+    dayjs("2014-08-18T21:11:54")
+  );
 
-  useEffect(() => {
-    axios
-      .get(
-        "https://portal.pelecard.biz/api/Transactions?FromCreatedDate=2021-02-01T01:00:00&ToCreatedDate=2022-02-10T00:00:00&Terminals=0882577012, 0883577010&PageNumber=11",
-        {
-          headers: {
-            Authorization:
-              "Bearer " +
-              "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjMiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJwb3J0YWx0ZXN0dXNlckBwZWxlY2FyZC5iaXoiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTY2NDQ1Nzk5OX0.P4ppdCA1t9_U7vwp63ZnY58YR6vwh3FBWgZpOdy__Ii7H_V-dGc2WkDMB033vqWyvsPbOFXiFVmM5Icp14UyjA",
-          },
-        }
-      )
-      .then((res: any) => {
-        const allPersons: any = res.data;
-        setAppState(allPersons);
-      });
-  }, [setAppState]);
-  const obj = {};
+  const handlePickerChange = (newValue: Dayjs | null) => {
+    setValuePicker(newValue);
+  };
+
   return (
     <div className={styles.transactions}>
       <div className={styles.content}>
@@ -71,10 +64,26 @@ export const Transactions = () => {
                 <div className={styles.settings}>
                   <Dropdown />
                   <div className={styles.buttonGroup}>
-                    <ActionButton text="מחק עסקה" onClick={onClickHandler} />
-                    <ActionButton text="מחק עסקה" onClick={onClickHandler} />
-                    <ActionButton text="מחק עסקה" onClick={onClickHandler} />
-                    <ActionButton text="מחק עסקה" onClick={onClickHandler} />
+                    <ActionButton
+                      image={Delete}
+                      text="מחק עסקה"
+                      onClick={onClickHandler}
+                    />
+                    <ActionButton
+                      image={Refresh}
+                      text="מחק עסקה"
+                      onClick={onClickHandler}
+                    />
+                    <ActionButton
+                      image={Snow}
+                      text="מחק עסקה"
+                      onClick={onClickHandler}
+                    />
+                    <ActionButton
+                      image={Signal}
+                      text="מחק עסקה"
+                      onClick={onClickHandler}
+                    />
                   </div>
                 </div>
                 <TabList
@@ -93,14 +102,18 @@ export const Transactions = () => {
                   <div className={styles.tableSettings}>
                     <div className={styles.tableTerms}>
                       <ExportButton name="יצוא" image={Export} />
-                      <FilterButton name="יצוא" image={Filter} />
+                      <FilterButton name="סנן לפי" image={Filter} />
                     </div>
                     <div className={styles.tableControll}>
                       <Button />
-                      <ChoiseButton name="יצוא" image={Arrow} />
+                      <ChoiseButton
+                        terminals={terminals}
+                        name="בחר מסוף"
+                        image={Arrow}
+                      />
                     </div>
                   </div>
-                  <Table />
+                  <Table data={content} />
                 </div>
               </TabPanel>
               <TabPanel value="2">
@@ -108,19 +121,45 @@ export const Transactions = () => {
                   <div className={styles.tableSettings}>
                     <div className={styles.tableTerms}>
                       <ExportButton name="יצוא" image={Export} />
-                      <FilterButton name="יצוא" image={Filter} />
+                      <FilterButton name="סנן לפי" image={Filter} />
                     </div>
                     <div className={styles.tableControll}>
                       <Button />
-                      <ChoiseButton name="יצוא" image={Arrow} />
+                      <div className={styles.tableControllField}>
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                          <div className={styles.tableFiledItem}>
+                            <DesktopDatePicker
+                              inputFormat="MM/DD/YYYY"
+                              value={valuePicker}
+                              onChange={handlePickerChange}
+                              renderInput={(params: any) => (
+                                <TextField {...params} />
+                              )}
+                            />
+                          </div>
+                          <div className={styles.tableFiledItem}>
+                            <DesktopDatePicker
+                              inputFormat="MM/DD/YYYY"
+                              value={valuePicker}
+                              onChange={handlePickerChange}
+                              renderInput={(params: any) => (
+                                <TextField {...params} />
+                              )}
+                            />
+                          </div>
+                        </LocalizationProvider>
+                      </div>
+                      <ChoiseButton
+                        terminals={terminals}
+                        name="בחר מסוף"
+                        image={Arrow}
+                      />
                     </div>
                   </div>
-                  <Table />
+                  <Table data={content} />
                 </div>
               </TabPanel>
-              <TabPanel value="3">
-               
-              </TabPanel>
+              <TabPanel value="3">Item three</TabPanel>
               <TabPanel value="4">Item Foure</TabPanel>
               <TabPanel value="5">Item Five</TabPanel>
             </TabContext>
@@ -128,7 +167,7 @@ export const Transactions = () => {
         </div>
       </div>
       <div className={styles.sidebar}>
-        <SideBar />
+        <SideBar typeForm={formToggle.EXIT} />
       </div>
     </div>
   );

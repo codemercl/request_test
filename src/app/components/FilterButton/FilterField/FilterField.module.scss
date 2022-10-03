@@ -12,5 +12,8 @@
     margin-top: 5px;
     outline: none;
     color: #B8BBC8;
+    &:focus {
+      background: #eef3f7;
+    }
   }
 }
